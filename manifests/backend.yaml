@@ -1,12 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: liveclinic
   name: liveclinic-backend
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: liveclinic-backend
   template:
+    metadata:
+      labels:
+        app: liveclinic-backend
     spec:
       containers:
-      - name: backend
-        image: docker.io./jonahirande/liveclinic-backend:1.0
+        - name: backend
+          image: jonahirande/live-clinic-backend:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: DB_HOST
+              value: liveclinic-db
+            - name: DB_PORT
+              value: "5432"
+

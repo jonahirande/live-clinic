@@ -1,12 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: liveclinic
   name: liveclinic-frontend
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: liveclinic-frontend
   template:
+    metadata:
+      labels:
+        app: liveclinic-frontend
     spec:
       containers:
-      - name: frontend
-        image: docker.io/jonahirande/liveclinic-frontend:1.0
+        - name: frontend
+          image: jonahirande/live-clinic-frontend:latest
+          ports:
+            - containerPort: 3000
