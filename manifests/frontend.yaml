@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: jonahirande/live-clinic-frontend:1.0
+          image: jonahirande/liveclinic-frontend:1.0
           ports:
             - containerPort: 3000
