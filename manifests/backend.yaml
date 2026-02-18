@@ -9,5 +9,4 @@ spec:
     spec:
       containers:
       - name: backend
-        image: jonahirande/liveclinic-backend:1.0
-        
+        image: docker.io./jonahirande/liveclinic-backend:1.0

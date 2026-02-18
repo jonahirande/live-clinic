@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: db
-        image: jonahirande/liveclinic-db:1.0
+        image: docker.io/jonahirande/liveclinic-db:1.0
