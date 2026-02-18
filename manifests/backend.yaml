@@ -10,3 +10,4 @@ spec:
       containers:
       - name: backend
         image: jonahirande/liveclinic-backend:1.0
+        
