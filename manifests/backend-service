@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: liveclinic
+  name: liveclinic-backend
+  labels:
+    app: liveclinic-backend
+spec:
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: liveclinic-backend
