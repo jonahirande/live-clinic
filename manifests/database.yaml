@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: liveclinic
+  name: liveclinic-db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: liveclinic-db
+  template:
+    metadata:
+      labels:
+        app: liveclinic-db
+    spec:
+      containers:
+      - name: db
+        image: jonahirande/liveclinic-db:1.0

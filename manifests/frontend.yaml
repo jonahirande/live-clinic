@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: liveclinic-frontend
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: frontend
+        image: jonahirande/liveclinic-frontend:1.0
